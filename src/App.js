@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Stopwatch from './Stopwatch';
+import { Grid, Typography ,CssBaseline,Container} from '@mui/material';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <CssBaseline />
+    <Container maxWidth="sm">
+      <Grid container sx={{color:'black',alignContent:'center',justifyContent:"center"}}><Typography variant='h3'>StopWatch</Typography></Grid>
+      <Grid container sx={{ bgcolor: 'skyblue', height: '50vh' , justifyContent:'center',alignContent:"center",color:'red',border:"5px solid black",borderRadius:"15px"}} >
+        <Stopwatch/>
+        </Grid>
+    </Container>
+    </>
   );
-}
+};
 
 export default App;
